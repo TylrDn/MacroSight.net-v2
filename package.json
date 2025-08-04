@@ -7,6 +7,7 @@
     "preview": "vite preview",
     "lint": "eslint public/**/*.js public/**/*.html || echo \"✅ No files to lint\"",
     "format": "prettier --write public/**/*.html || echo \"✅ Nothing to format\"",
+    "test": "node your-test-runner",
     "html:lint": "htmlhint \"public/*.html\"",
     "html:format": "prettier --write \"public/*.html\"",
     "ci": "npm run lint && npm run format && npm run build"
