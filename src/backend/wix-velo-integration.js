@@ -3,6 +3,9 @@
 
 import { fetch } from "wix-fetch";
 
+// Feature flag to switch between embed mode and dynamic loading
+const USE_EMBED = false;
+
 function initializeDynamicLoading(htmlComponent) {
   async function loadPageContent(pageName) {
     try {
@@ -45,13 +48,15 @@ function initializeEmbed(htmlComponent) {
   }, 1000);
 }
 
-$w.onReady(function () {
-  const htmlComponent = $w("#htmlComponent1");
-  const useEmbed = false; // Feature flag for alternative initialization
-
-  if (useEmbed) {
+function initialize(htmlComponent) {
+  if (USE_EMBED) {
     initializeEmbed(htmlComponent);
   } else {
     initializeDynamicLoading(htmlComponent);
   }
+}
+
+$w.onReady(() => {
+  const htmlComponent = $w("#htmlComponent1");
+  initialize(htmlComponent);
 });
