@@ -21,7 +21,8 @@
       function safeInject(html) {
         if (typeof html !== "string" || /<head[\s>]/i.test(html)) return false;
 
-        // Strip out any <script> tags to avoid executing arbitrary code
+        // Parse with DOMParser and strip out any <script> tags to avoid
+        // executing arbitrary code before injecting content
         const parser = new DOMParser();
         const doc = parser.parseFromString(html, "text/html");
         const scripts = doc.querySelectorAll("script");
