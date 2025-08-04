@@ -2,7 +2,7 @@
   "name": "macrosight-site",
   "version": "2.0.0",
   "scripts": {
-    "dev": "vite preview --port 3000 --open",
+    "dev": "node scripts/dev.js",
     "build": "echo \"✅ Static site – no build needed\"",
     "preview": "vite preview",
     "lint": "eslint src/**/*.js || echo \"✅ No files to lint\"",
