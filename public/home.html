@@ -9,19 +9,8 @@
     />
     <title>Taylor Dean | Hybrid Infrastructure Architect</title>
     <link rel="stylesheet" href="./styles.css" />
+    <script src="./tailwind-config.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              neon: "#00f6ff",
-            },
-          },
-        },
-        darkMode: "class",
-      };
-    </script>
   </head>
   <body class="bg-gray-900 text-gray-100 font-sans">
     <header class="fixed top-0 w-full bg-gray-900/80 backdrop-blur z-50">
@@ -307,12 +296,6 @@
       &copy; 2025 Taylor Dean. All rights reserved.
     </footer>
 
-    <script>
-      const menuBtn = document.getElementById("menu-btn");
-      const menu = document.getElementById("menu");
-      menuBtn.addEventListener("click", () => {
-        menu.classList.toggle("hidden");
-      });
-    </script>
+    <script src="./menu.js"></script>
   </body>
 </html>

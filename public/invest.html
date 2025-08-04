@@ -13,12 +13,7 @@
     <title>Invest – MacroSight</title>
     <link rel="stylesheet" href="./styles.css" />
     <script src="./iframe-loader.js"></script>
-    <script>
-      if (window.top === window.self) {
-        document.body.innerHTML =
-          "<p style='text-align:center;padding:2em;'>This page is meant to be embedded in a Wix iframe. Visit <a href='https://www.macrosight.net'>macrosight.net</a> to view.</p>";
-      }
-    </script>
+    <script src="./embed-check.js"></script>
   </head>
   <body>
     <header>
@@ -52,14 +47,6 @@
       </div>
     </header>
     <div class="loader">Loading…</div>
-    <script>
-      const menuBtn = document.getElementById("menu-btn");
-      const menu = document.getElementById("menu");
-      if (menuBtn && menu) {
-        menuBtn.addEventListener("click", () => {
-          menu.classList.toggle("hidden");
-        });
-      }
-    </script>
+    <script src="./menu.js"></script>
   </body>
 </html>

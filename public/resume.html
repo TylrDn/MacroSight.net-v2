@@ -12,12 +12,7 @@
     <title>Résumé – MacroSight</title>
     <link rel="stylesheet" href="./styles.css" />
     <script src="./iframe-loader.js"></script>
-    <script>
-      if (window.top === window.self) {
-        document.body.innerHTML =
-          "<p style='text-align:center;padding:2em;'>This page is meant to be embedded in a Wix iframe. Visit <a href='https://www.macrosight.net'>macrosight.net</a> to view.</p>";
-      }
-    </script>
+    <script src="./embed-check.js"></script>
   </head>
   <body>
     <div class="loader">Loading…</div>
