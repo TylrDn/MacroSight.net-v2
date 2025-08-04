@@ -5,7 +5,7 @@
     "dev": "vite preview --port 3000 --open",
     "build": "echo \"✅ Static site – no build needed\"",
     "preview": "vite preview",
-    "lint": "eslint public/**/*.js public/**/*.html || echo \"✅ No files to lint\"",
+    "lint": "eslint src/**/*.js || echo \"✅ No files to lint\"",
     "format": "prettier --write public/**/*.html || echo \"✅ Nothing to format\"",
     "test": "node your-test-runner",
     "html:lint": "htmlhint \"public/*.html\"",
