@@ -12,37 +12,8 @@
     />
     <title>Invest – MacroSight</title>
     <link rel="stylesheet" href="/styles.css" />
+    <script src="/iframe-loader.js"></script>
     <script>
-      // Hardened postMessage injection for Wix Velo
-      const ALLOWED_ORIGINS = [
-        "https://www.macrosight.net",
-        "https://macrosight.netlify.app",
-      ];
-      function safeInject(html) {
-        if (typeof html !== "string" || /<head[\s>]/i.test(html)) return false;
-
-        // Strip out any <script> tags to avoid executing arbitrary code
-        const parser = new DOMParser();
-        const doc = parser.parseFromString(html, "text/html");
-        const scripts = doc.querySelectorAll("script");
-        scripts.forEach((s) => s.remove());
-        document.body.innerHTML = doc.body.innerHTML;
-        return true;
-      }
-      window.addEventListener(
-        "message",
-        (event) => {
-          if (!ALLOWED_ORIGINS.includes(event.origin)) return;
-          if (safeInject(event.data)) {
-            const loader = document.querySelector(".loader");
-            if (loader) loader.style.display = "none";
-          } else {
-            document.body.innerHTML =
-              '<div style="padding:2em;text-align:center;color:#c00;">Sorry, content failed to load. Please try again later.</div>';
-          }
-        },
-        false,
-      );
       if (window.top === window.self) {
         document.body.innerHTML =
           "<p style='text-align:center;padding:2em;'>This page is meant to be embedded in a Wix iframe. Visit <a href='https://www.macrosight.net'>macrosight.net</a> to view.</p>";
@@ -50,6 +21,45 @@
     </script>
   </head>
   <body>
+    <header>
+      <div class="section">
+        <h1>MacroSight</h1>
+        <button id="menu-btn" aria-label="Toggle navigation">
+          <svg
+            width="24"
+            height="24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M4 6h16M4 12h16M4 18h16"
+            />
+          </svg>
+        </button>
+        <nav id="menu" class="hidden">
+          <a href="/home.html">Home</a>
+          <a href="/about.html">About</a>
+          <a href="/experience.html">Experience</a>
+          <a href="/projects.html">Projects</a>
+          <a href="/resume.html">Resume</a>
+          <a href="/contact.html">Contact</a>
+          <a href="/invest.html">Invest</a>
+        </nav>
+      </div>
+    </header>
     <div class="loader">Loading…</div>
+    <script>
+      const menuBtn = document.getElementById("menu-btn");
+      const menu = document.getElementById("menu");
+      if (menuBtn && menu) {
+        menuBtn.addEventListener("click", () => {
+          menu.classList.toggle("hidden");
+        });
+      }
+    </script>
   </body>
 </html>

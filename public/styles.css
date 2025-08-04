@@ -62,7 +62,8 @@ header nav a {
     background 0.2s;
 }
 
-header nav a:hover {
+header nav a:hover,
+header nav a:focus {
   color: var(--color-fg);
   background: rgba(59, 130, 246, 0.1);
 }
@@ -80,8 +81,15 @@ a {
   transition: color 0.2s;
 }
 
-a:hover {
+a:hover,
+a:focus {
   color: var(--color-emerald);
+}
+
+a:focus,
+button:focus {
+  outline: 2px solid var(--color-emerald);
+  outline-offset: 2px;
 }
 
 footer {
@@ -113,6 +121,34 @@ header nav {
   flex-wrap: wrap;
   gap: 16px;
   justify-content: center;
+}
+
+#menu-btn {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--color-fg);
+  cursor: pointer;
+}
+
+.hidden {
+  display: none;
+}
+
+@media (max-width: 640px) {
+  #menu-btn {
+    display: block;
+  }
+
+  nav#menu {
+    flex-direction: column;
+  }
+}
+
+@media (min-width: 640px) {
+  nav#menu {
+    display: flex;
+  }
 }
 
 .section-spacing {
@@ -174,7 +210,8 @@ header nav {
   box-shadow: 0 0 0 rgba(0, 0, 0, 0);
 }
 
-.cta-button:hover {
+.cta-button:hover,
+.cta-button:focus {
   background: linear-gradient(
     135deg,
     var(--color-emerald),
@@ -183,18 +220,7 @@ header nav {
   color: #ffffff;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .cta-button {
-    transition:
-      transform 0.2s,
-      box-shadow 0.2s,
-      background 0.2s;
-  }
 
-  .cta-button:hover {
-    box-shadow: var(--glow);
-    transform: translateY(-2px);
-  }
 }
 
 /* Skeleton loader for Wix HTML injection */
