@@ -34,6 +34,19 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+/* Subtle tech grid background */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  background-size: 40px 40px;
+  pointer-events: none;
+  z-index: -1;
+}
+
 header {
   background-color: rgba(13, 17, 23, 0.6);
   border-bottom: 1px solid var(--color-border);
@@ -51,6 +64,14 @@ header nav a {
 header nav a:hover {
   color: var(--color-fg);
   background: rgba(59, 130, 246, 0.1);
+}
+
+h1 {
+  font-weight: 700;
+  background: linear-gradient(90deg, var(--color-accent), var(--color-emerald));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin: 0;
 }
 
 a {
