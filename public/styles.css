@@ -123,6 +123,34 @@ header nav {
   justify-content: center;
 }
 
+#menu-btn {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--color-fg);
+  cursor: pointer;
+}
+
+.hidden {
+  display: none;
+}
+
+@media (max-width: 640px) {
+  #menu-btn {
+    display: block;
+  }
+
+  nav#menu {
+    flex-direction: column;
+  }
+}
+
+@media (min-width: 640px) {
+  nav#menu {
+    display: flex;
+  }
+}
+
 .section-spacing {
   margin-top: 48px;
   margin-bottom: 48px;
