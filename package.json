@@ -16,7 +16,6 @@
     "vite": "^5.0.0",
     "eslint": "^8.56.0",
     "prettier": "^3.2.5",
-    "htmlhint": "^1.1.5",
-    "sanitize-html": "^2.7.0"
+    "htmlhint": "^1.1.5"
   }
 }
