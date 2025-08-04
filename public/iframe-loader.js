@@ -13,6 +13,18 @@
     const doc = parser.parseFromString(html, "text/html");
     const scripts = doc.querySelectorAll("script");
     scripts.forEach((s) => s.remove());
+
+    // Remove inline event handler attributes (e.g., onclick, onerror)
+    const walker = doc.createTreeWalker(doc.body, NodeFilter.SHOW_ELEMENT);
+    let node = walker.currentNode;
+    while (node) {
+      const attrs = Array.from(node.attributes || []);
+      attrs.forEach((attr) => {
+        if (/^on/i.test(attr.name)) node.removeAttribute(attr.name);
+      });
+      node = walker.nextNode();
+    }
+
     document.body.innerHTML = doc.body.innerHTML;
     return true;
   }
