@@ -1,3 +1,9 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 :root {
   --color-bg: #fafbfc;
   --color-fg: #23272f;
@@ -31,6 +37,21 @@ body {
   background: none;
 }
 
+header .section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  text-align: center;
+}
+
+header nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+}
+
 .section-spacing {
   margin-top: 48px;
   margin-bottom: 48px;
@@ -44,6 +65,28 @@ body {
 
 .flex-column {
   flex-direction: column;
+}
+
+@media (min-width: 640px) {
+  header .section {
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+  }
+
+  header nav {
+    flex-wrap: nowrap;
+  }
+}
+
+@media (max-width: 640px) {
+  .section {
+    padding: 32px 16px 48px;
+  }
+
+  .card {
+    padding: 20px;
+  }
 }
 
 /* Cards & Components */
