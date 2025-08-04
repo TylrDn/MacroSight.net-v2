@@ -105,13 +105,6 @@ This site includes:
 
 Both are in `/public` and will be live at the root of your deployed site for search engines and best practice.
 
-All page scripts should import global styles like this for Wix/Velo compatibility:
-
-```js
-import { injectGlobalStyles } from "public/globalStyles";
-```
-
-Call `injectGlobalStyles()` at the top of your `$w.onReady()` function in each page script.
 
 # Git Integration & Wix CLI <img align="left" src="https://user-images.githubusercontent.com/89579857/185785022-cab37bf5-26be-4f11-85f0-1fac63c07d3b.png">
 

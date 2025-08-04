@@ -7,7 +7,7 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 const embedHtml = readFileSync(join(__dirname, '../public/embed.html'), 'utf8');
 
 assert.ok(
-  embedHtml.includes('/iframe-loader.js'),
+  embedHtml.includes('./iframe-loader.js'),
   'embed page should load iframe loader script',
 );
 
