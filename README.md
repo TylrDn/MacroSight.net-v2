@@ -4,6 +4,10 @@
 
 This static site implements a hybrid architecture that supports both standalone HTML pages and Wix-Velo iframe integration through postMessage communication.
 
+## Local Development
+
+Run `npm run dev` to preview the site at `http://localhost:3000`. The script opens your default browser when possible. On Linux systems without `xdg-open`, the server starts without launching a browser, so open the URL manually.
+
 ## File Structure
 
 ### Static HTML Pages
