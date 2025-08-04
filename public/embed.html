@@ -15,7 +15,13 @@
       function safeInject(html) {
         // Never replace <head>, only <body> content
         if (typeof html !== "string" || /<head[\s>]/i.test(html)) return false;
-        document.body.innerHTML = html;
+
+        // Strip out any <script> tags to avoid executing arbitrary code
+        const parser = new DOMParser();
+        const doc = parser.parseFromString(html, "text/html");
+        const scripts = doc.querySelectorAll("script");
+        scripts.forEach((s) => s.remove());
+        document.body.innerHTML = doc.body.innerHTML;
         return true;
       }
       
