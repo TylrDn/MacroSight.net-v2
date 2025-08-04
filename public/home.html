@@ -25,11 +25,14 @@
   </head>
   <body class="bg-gray-900 text-gray-100 font-sans">
     <header class="fixed top-0 w-full bg-gray-900/80 backdrop-blur z-50">
-      <nav class="max-w-5xl mx-auto flex items-center justify-between p-4">
+      <nav
+        class="max-w-5xl mx-auto flex items-center justify-between p-4"
+        aria-label="Main navigation"
+      >
         <a href="#hero" class="text-xl font-bold text-neon">Taylor Dean</a>
         <button
           id="menu-btn"
-          class="sm:hidden text-gray-100 focus:outline-none"
+          class="sm:hidden text-gray-100"
           aria-label="Toggle navigation"
         >
           <svg
@@ -213,7 +216,12 @@
               Designed and deployed GPU-accelerated HPC cluster with automated
               scaling.
             </p>
-            <a href="#" class="text-neon underline">View Case Study</a>
+            <a
+              href="#"
+              class="text-neon underline"
+              aria-label="View case study for HPC Deployment on GCP"
+              >View Case Study</a
+            >
           </div>
           <div class="bg-gray-800 p-6 rounded">
             <h3 class="text-xl font-semibold mb-2">
@@ -223,7 +231,12 @@
               Integrated SCADA data streams into cloud-native analytics
               platform.
             </p>
-            <a href="#" class="text-neon underline">View Case Study</a>
+            <a
+              href="#"
+              class="text-neon underline"
+              aria-label="View case study for Grid-to-Cloud Integration"
+              >View Case Study</a
+            >
           </div>
         </div>
       </section>
@@ -261,6 +274,7 @@
             <button
               type="submit"
               class="bg-neon text-gray-900 px-6 py-3 rounded font-semibold hover:bg-teal-300 transition"
+              aria-label="Send message"
             >
               Send
             </button>
