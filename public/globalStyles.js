@@ -1,7 +1,7 @@
 export function injectGlobalStyles() {
-  if (document.getElementById('macrosight-global-styles')) return;
-  const style = document.createElement('style');
-  style.id = 'macrosight-global-styles';
+  if (document.getElementById("macrosight-global-styles")) return;
+  const style = document.createElement("style");
+  style.id = "macrosight-global-styles";
   style.textContent = `*,
 *::before,
 *::after {
@@ -59,16 +59,6 @@ header nav {
 .section-spacing {
   margin-top: 48px;
   margin-bottom: 48px;
-}
-
-.centered-flex {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.flex-column {
-  flex-direction: column;
 }
 
 @media (min-width: 640px) {

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap");
 
 *,
 *::before,
@@ -16,7 +16,7 @@
   --color-muted: #8b949e;
 
   --glow: 0 0 12px rgba(59, 130, 246, 0.4);
-  --font-main: 'Inter', 'Segoe UI', Arial, sans-serif;
+  --font-main: "Inter", "Segoe UI", Arial, sans-serif;
   --radius: 12px;
   --shadow: 0 4px 24px rgba(0, 0, 0, 0.4);
   color-scheme: dark;
@@ -31,7 +31,6 @@ body {
   min-height: 100vh;
   font-size: 1.08rem;
   line-height: 1.6;
-  -webkit-font-smoothing: antialiased;
 }
 
 /* Subtle tech grid background */
@@ -58,7 +57,9 @@ header nav a {
   padding: 4px 8px;
   border-radius: 4px;
   text-decoration: none;
-  transition: color 0.2s, background 0.2s;
+  transition:
+    color 0.2s,
+    background 0.2s;
 }
 
 header nav a:hover {
@@ -119,16 +120,6 @@ header nav {
   margin-bottom: 48px;
 }
 
-.centered-flex {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.flex-column {
-  flex-direction: column;
-}
-
 @media (min-width: 640px) {
   header .section {
     flex-direction: row;
@@ -170,18 +161,29 @@ header nav {
   padding: 10px 22px;
   border-radius: 6px;
   border: none;
-  background: linear-gradient(135deg, var(--color-accent), var(--color-emerald));
+  background: linear-gradient(
+    135deg,
+    var(--color-accent),
+    var(--color-emerald)
+  );
   color: #ffffff;
   font-weight: 600;
   font-size: 1.05rem;
   text-decoration: none;
   cursor: pointer;
   box-shadow: 0 0 0 rgba(0, 0, 0, 0);
-  transition: transform 0.2s, box-shadow 0.2s, background 0.2s;
+  transition:
+    transform 0.2s,
+    box-shadow 0.2s,
+    background 0.2s;
 }
 
 .cta-button:hover {
-  background: linear-gradient(135deg, var(--color-emerald), var(--color-accent));
+  background: linear-gradient(
+    135deg,
+    var(--color-emerald),
+    var(--color-accent)
+  );
   box-shadow: var(--glow);
   transform: translateY(-2px);
   color: #ffffff;
@@ -199,12 +201,22 @@ header nav {
   border: 6px solid var(--color-border);
   border-top: 6px solid var(--color-accent);
   animation: spin 1s linear infinite;
-  font-family: var(--font-main), -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+  font-family:
+    var(--font-main),
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Arial,
+    sans-serif;
   font-size: 1rem;
   z-index: 1000;
 }
 
 @keyframes spin {
-  0%   { transform: translate(-50%, -50%) rotate(0deg); }
-  100% { transform: translate(-50%, -50%) rotate(360deg); }
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
 }
