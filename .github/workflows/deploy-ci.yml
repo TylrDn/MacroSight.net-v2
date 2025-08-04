@@ -26,10 +26,10 @@ jobs:
         run: npm test
 
       - name: Lint source code
-        run: npx eslint src/pages/ src/public/ --fix
+        run: npx eslint src/pages/ src/public/ --fix --no-error-on-unmatched-pattern
 
       - name: Format source code
-        run: npx prettier --write src/pages/ src/public/
+        run: npx prettier --write src/pages/ src/public/ --no-error-on-unmatched-pattern
 
       - name: HTMLHint checks
         run: npx htmlhint "public/*.html"
