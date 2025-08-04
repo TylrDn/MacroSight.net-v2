@@ -208,10 +208,6 @@ header nav {
   text-decoration: none;
   cursor: pointer;
   box-shadow: 0 0 0 rgba(0, 0, 0, 0);
-  transition:
-    transform 0.2s,
-    box-shadow 0.2s,
-    background 0.2s;
 }
 
 .cta-button:hover,
@@ -221,14 +217,8 @@ header nav {
     var(--color-emerald),
     var(--color-accent)
   );
-  box-shadow: var(--glow);
-  transform: translateY(-2px);
   color: #ffffff;
 }
-
-.cta-button:focus {
-  outline: 2px solid var(--color-emerald);
-  outline-offset: 2px;
 }
 
 /* Skeleton loader for Wix HTML injection */
@@ -242,7 +232,6 @@ header nav {
   border-radius: 50%;
   border: 6px solid var(--color-border);
   border-top: 6px solid var(--color-accent);
-  animation: spin 1s linear infinite;
   font-family:
     var(--font-main),
     -apple-system,
@@ -254,11 +243,17 @@ header nav {
   z-index: 1000;
 }
 
-@keyframes spin {
-  0% {
-    transform: translate(-50%, -50%) rotate(0deg);
+@media (prefers-reduced-motion: no-preference) {
+  .loader {
+    animation: spin 1s linear infinite;
   }
-  100% {
-    transform: translate(-50%, -50%) rotate(360deg);
+
+  @keyframes spin {
+    0% {
+      transform: translate(-50%, -50%) rotate(0deg);
+    }
+    100% {
+      transform: translate(-50%, -50%) rotate(360deg);
+    }
   }
 }
