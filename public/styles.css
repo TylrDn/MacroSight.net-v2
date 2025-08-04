@@ -62,7 +62,8 @@ header nav a {
     background 0.2s;
 }
 
-header nav a:hover {
+header nav a:hover,
+header nav a:focus {
   color: var(--color-fg);
   background: rgba(59, 130, 246, 0.1);
 }
@@ -80,8 +81,15 @@ a {
   transition: color 0.2s;
 }
 
-a:hover {
+a:hover,
+a:focus {
   color: var(--color-emerald);
+}
+
+a:focus,
+button:focus {
+  outline: 2px solid var(--color-emerald);
+  outline-offset: 2px;
 }
 
 footer {
@@ -206,7 +214,8 @@ header nav {
     background 0.2s;
 }
 
-.cta-button:hover {
+.cta-button:hover,
+.cta-button:focus {
   background: linear-gradient(
     135deg,
     var(--color-emerald),
@@ -215,6 +224,11 @@ header nav {
   box-shadow: var(--glow);
   transform: translateY(-2px);
   color: #ffffff;
+}
+
+.cta-button:focus {
+  outline: 2px solid var(--color-emerald);
+  outline-offset: 2px;
 }
 
 /* Skeleton loader for Wix HTML injection */
