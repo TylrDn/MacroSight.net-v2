@@ -189,6 +189,13 @@ header nav {
   color: var(--color-fg);
   font-size: 1.08rem;
   backdrop-filter: blur(6px);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover,
+.card:focus-within {
+  box-shadow: var(--glow), var(--shadow);
+  transform: translateY(-2px);
 }
 
 .cta-button {
