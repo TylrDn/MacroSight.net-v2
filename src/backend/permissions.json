@@ -9,7 +9,7 @@
           "invoke": true
         },
         "anonymous": {
-          "invoke": true
+          "invoke": false
         }
       }
     }
