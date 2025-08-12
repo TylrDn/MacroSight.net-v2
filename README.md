@@ -8,6 +8,10 @@ This static site implements a hybrid architecture that supports both standalone 
 
 Run `npm run dev` to preview the site at `http://localhost:3000`. The script opens your default browser when possible. On Linux systems without `xdg-open`, the server starts without launching a browser, so open the URL manually.
 
+### Building
+
+Run `npm run build` before deploying. This injects the shared header into each HTML page. `npm run check:links` validates that all internal links resolve.
+
 ## File Structure
 
 ### Static HTML Pages

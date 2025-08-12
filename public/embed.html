@@ -8,14 +8,44 @@
       content="Secure page used to embed MacroSight content on external sites."
     />
     <title>MacroSight Embed</title>
+    <link rel="canonical" href="https://www.macrosight.net/embed" />
+    <meta property="og:title" content="MacroSight Embed" />
+    <meta property="og:description" content="Secure page used to embed MacroSight content on external sites." />
+    <meta property="og:url" content="https://www.macrosight.net/embed" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="MacroSight Embed" />
+    <meta name="twitter:description" content="Secure page used to embed MacroSight content on external sites." />
     <link rel="stylesheet" href="./styles.css" />
     <script src="./iframe-loader.js"></script>
   </head>
   <body>
+    <!--#HEADER#--><!-- AI will replace this with header.html during build -->
+
+    <!-- Progressive enhancement: keep runtime include for cache-busted updates -->
+    <div id="header-placeholder" hidden></div>
+    <script src="/include-header.js" defer></script>
+    <noscript>
+      <!-- No-JS fallback: a minimal header link strip -->
+      <link rel="stylesheet" href="/styles.css" />
+      <header class="site-header noscript">
+        <div class="section header-content">
+          <a class="brand" href="/"><span>MACROsite</span></a>
+          <nav aria-label="Primary">
+            <a href="/home">Home</a>
+            <a href="/projects">Projects</a>
+            <a href="/experience">Experience</a>
+            <a href="/about">About</a>
+            <a href="/contact">Contact</a>
+            <a href="/resume">Resume</a>
+          </nav>
+        </div>
+      </header>
+    </noscript>
+
     <div class="loader">Loading…</div>
     <noscript>
       This page is meant to be embedded.
-      <a href="https://www.macrosight.net/home.html">Go to Home</a>
+      <a href="https://www.macrosight.net/home">Go to Home</a>
     </noscript>
   </body>
 </html>
