@@ -4,6 +4,29 @@
 
 This static site implements a hybrid architecture that supports both standalone HTML pages and Wix-Velo iframe integration through postMessage communication.
 
+## Header & Accessibility Updates
+
+Recent changes introduce a responsive sticky header with an accessible mobile navigation drawer. The menu supports keyboard navigation, ESC to close, focus trapping, and screen-reader announcements.
+
+### Run locally
+
+```bash
+npm run dev
+```
+
+### Run tests
+
+```bash
+npm test
+```
+
+### Checklist
+
+- [x] Header layout verified at 375px, 768px, 1024px and 1280px
+- [x] Hamburger open/close with focus trap and ESC support
+- [x] Sticky header without layout shift
+- [x] Keyboard navigation and screen reader announcements
+
 ## Local Development
 
 Run `npm run dev` to preview the site at `http://localhost:3000`. The script opens your default browser when possible. On Linux systems without `xdg-open`, the server starts without launching a browser, so open the URL manually.
