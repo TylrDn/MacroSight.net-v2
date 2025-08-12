@@ -19,7 +19,7 @@
     X-Frame-Options = "DENY"
     X-XSS-Protection = "1; mode=block"
     Referrer-Policy = "strict-origin-when-cross-origin"
-    Content-Security-Policy = "default-src 'self'; script-src 'self' https://cdn.tailwindcss.com; style-src 'self' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; form-action 'self' https://formspree.io"
+    Content-Security-Policy = "default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self'; connect-src 'self';"
 
 [[redirects]]
   from = "/"
@@ -27,39 +27,45 @@
   status = 200
 
 [[redirects]]
+  from = "/:path+/"
+  to = "/:path+"
+  status = 301
+  force = true
+
+[[redirects]]
   from = "/home"
   to = "/home.html"
-  status = 200
+  status = 301
 
 [[redirects]]
   from = "/about"
   to = "/about.html"
-  status = 200
+  status = 301
 
 [[redirects]]
   from = "/resume"
   to = "/resume.html"
-  status = 200
+  status = 301
 
 [[redirects]]
   from = "/projects"
   to = "/projects.html"
-  status = 200
+  status = 301
 
 [[redirects]]
   from = "/contact"
   to = "/contact.html"
-  status = 200
+  status = 301
 
 [[redirects]]
   from = "/invest"
   to = "/invest.html"
-  status = 200
+  status = 301
 
 [[redirects]]
   from = "/experience"
   to = "/experience.html"
-  status = 200
+  status = 301
 
 [[redirects]]
   from = "/404"
