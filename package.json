@@ -8,7 +8,7 @@
     "preview": "vite preview",
     "lint": "eslint src/**/*.js || echo \"✅ No files to lint\"",
     "format": "prettier --write public/**/*.html || echo \"✅ Nothing to format\"",
-    "test": "node tests/iframePages.test.mjs",
+    "test": "node tests/iframePages.test.mjs && node tests/header.test.mjs",
     "check:links": "npx linkinator public --quiet",
     "html:lint": "htmlhint \"public/*.html\"",
     "html:format": "prettier --write \"public/*.html\"",

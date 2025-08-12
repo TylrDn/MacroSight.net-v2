@@ -1,12 +1,34 @@
 <!-- htmlhint doctype-first:false -->
 <link rel="stylesheet" href="/styles.css" />
-<header class="site-header">
+<a href="#main" class="skip-link">Skip to content</a>
+<header class="site-header" role="banner">
   <div class="section header-content">
+    <span id="menu-status" class="sr-only" aria-live="polite"></span>
     <a class="brand" href="/"><span>MACROsite</span></a>
-    <button id="menu-btn" class="menu-btn" aria-expanded="false" aria-label="Toggle navigation">
+    <button
+      id="menu-btn"
+      class="menu-btn"
+      aria-expanded="false"
+      aria-controls="menu"
+      aria-label="Toggle navigation"
+    >
+      <svg
+        class="icon"
+        viewBox="0 0 24 24"
+        width="24"
+        height="24"
+        aria-hidden="true"
+      >
+        <path
+          d="M3 6h18M3 12h18M3 18h18"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+        />
+      </svg>
       <span class="sr-only">Menu</span>
     </button>
-    <nav id="menu" class="hidden" aria-label="Primary">
+    <nav id="menu" class="primary-nav hidden" aria-label="Primary">
       <a href="/home">Home</a>
       <a href="/projects">Projects</a>
       <a href="/experience">Experience</a>
@@ -16,6 +38,3 @@
     </nav>
   </div>
 </header>
-<script>
-  window.addEventListener('DOMContentLoaded', () => {});
-</script>
